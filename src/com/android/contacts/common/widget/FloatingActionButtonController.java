@@ -93,6 +93,16 @@ public class FloatingActionButtonController {
                 (int) (positionOffset * getTranslationXForAlignment(ALIGN_END)));
         mFloatingActionButtonContainer.setTranslationY(0);
     }
+    
+    /**
+     * Aligns the FAB to the described location
+     *
+     * @param align One of ALIGN_MIDDLE, ALIGN_QUARTER_RIGHT, or ALIGN_RIGHT.
+     * @param animate Whether or not to animate the transition.
+     */
+    public void align(int align, boolean animate) {
+        align(align, 0 /*offsetX */, 0 /* offsetY */, animate);
+    }
 
     /**
      * Aligns the FAB to the described location plus specified additional offsets.
